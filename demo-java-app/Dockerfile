@@ -1,4 +1,4 @@
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jre-alpine
 ARG artifact=target/demo-java-app.jar
 WORKDIR /opt/app
 COPY ${artifact} app.jar

@@ -26,15 +26,17 @@ spec:
               command:
               - curl
               - localhost:5601/api/status
-            initialDelaySeconds: 30
+            initialDelaySeconds: 60
             periodSeconds: 10
+            failureThreshold: 10
           livenessProbe:
             exec:
               command:
               - curl
               - localhost:5601/api/status
-            initialDelaySeconds: 30
+            initialDelaySeconds: 90
             periodSeconds: 10
+            failureThreshold: 12
           name: kibana
           ports:
             - containerPort: 5601

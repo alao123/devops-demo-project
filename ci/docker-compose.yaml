@@ -19,7 +19,7 @@ services:
     image: sonarqube:lts
     container_name: sonarqube
     ports:
-      - "9000:9000"  # SonarQube web UI
+      - "9050:9000"  # SonarQube web UI
     networks:
       - ci-network
     environment:
